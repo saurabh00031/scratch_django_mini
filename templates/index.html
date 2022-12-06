@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIM</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CRIM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+
+        <li class="nav-item">
+
+        </li>
+
+        <li class="nav-item">
+        
+        </li>
+
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <!-- For Demo Purpose-->
+  <header class="text-center mb-5" style="color:grey;">
+    <h2 class="mt-5"><b>🎶 CRIMINAL DETECTION & GPS TRACKING 🎶</b></h2>
+    <hr>
+    <h3 class="font-italic text-muted mb-0 mt-5"><b>Welcome: ({{request.user.username}})</b></h3>
+    <hr>
+  </header>
+
+
+  <!-- First Row [Prosucts]-->
+
+  
+
+  <div class="row pb-5" >
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" >
+      <!-- Card-->
+      <div class="card rounded shadow-sm border-3">
+        <div class="card-body p-4"><img src="https://media.istockphoto.com/id/1428172124/photo/handcuffed-suspect-being-arrested-by-police-at-night.jpg?b=1&s=170667a&w=0&k=20&c=p4QKT72s_p4gkHExdl1iqKXzt9Gk8AXFIJZl-R2YryU=" alt="" class="img-fluid d-block mx-auto mb-3">
+          <h3><a href="{% url 'register_police'  %}" class="btn btn-primary" role="button">Police signup</a> </h3></h5>
+         
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <!-- Card-->
+      <div class="card rounded shadow-sm border-3">
+        <div class="card-body p-4"><img src="https://media.istockphoto.com/id/1341104581/photo/police-car-lights-in-night-city-with-selective-focus-and-bokeh.jpg?b=1&s=170667a&w=0&k=20&c=a3y78ePBFvlhQ4Gzq8ulIQxXapyc4jBaFc8IgQwgDtY=" alt="" class="img-fluid d-block mx-auto mb-3">
+         <h3><a href="{% url 'sign_police'  %}" class="btn btn-primary" role="button">Police Sign In</a> </h3>
+         
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <!-- Card-->
+     <div class="card rounded shadow-sm border-3">
+        <div class="card-body p-4"><img src="https://media.istockphoto.com/id/1326757307/photo/close-up-of-police-body-camera.jpg?b=1&s=170667a&w=0&k=20&c=g2hqD4aoobE2j-XdpsjI71jMAVpZPmjwvz0L_IjExwM=" alt="" class="img-fluid d-block mx-auto mb-3">
+           <h3><a href="{% url 'add_crim'  %}" class="btn btn-primary" role="button">Add Criminal</a> </h3>
+          
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <!-- Card-->
+      <div class="card rounded shadow-sm border-3">
+        <div class="card-body p-4"><img src="https://media.istockphoto.com/id/1311901568/photo/police-car-with-blue-lights-on-the-crime-scene-in-traffic-urban-environment.jpg?b=1&s=170667a&w=0&k=20&c=3vxigDjHL_v-rgApk00xkmZ__9kvQxw2OoWlUML4zQY=" alt="" class="img-fluid d-block mx-auto mb-3">
+         <h3><a href="{% url 'show_crim'  %}" class="btn btn-primary" role="button">Show criminal</a> </h3>
+         
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </div>
+  </div>
+
+
+ 
+{% comment %}  {% endcomment %}
+
+
+<div class="container">
+  <!-- For Demo Purpose-->
+  
+
+
+  
+  <div class="row pb-5 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <!-- Card-->
+      <div class="card rounded shadow-sm border-3">
+        <div class="card-body p-4"><img src="https://media.istockphoto.com/id/683836860/photo/domestic-violence-and-police-responders.jpg?b=1&s=170667a&w=0&k=20&c=1Jt3CtxHfTK9DafZ0sSTC9yHuAAgJcBo6wGNHYbTv74=" alt="" class="img-fluid d-block mx-auto mb-3">
+         <h3><a href="{% url 'profile_police'  %}" class="btn btn-primary" role="button">My Profile</a> </h3>
+          
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <!-- Card-->
+      <div class="card rounded shadow-sm border-3">
+        <div class="card-body p-4"><img src="https://media.istockphoto.com/id/1143446891/photo/small-boy-watching-cartoons-on-smart-phone-in-the-dark.jpg?b=1&s=170667a&w=0&k=20&c=zcHo0yOdncqjF5yf5spUYqV547W_60gcfCtvsIvMSFQ=" alt="" class="img-fluid d-block mx-auto mb-3">
+         <h3><a href="{% url 'update_police_data'  %}" class="btn btn-primary" role="button">Re-update</a> </h3>
+         
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <!-- Card-->
+      <div class="card rounded shadow-sm border-3">
+        <div class="card-body p-4"><img src="https://media.istockphoto.com/id/1194077069/photo/hand-filling-criminal-background-check-application-form.jpg?b=1&s=170667a&w=0&k=20&c=bGJUT50Kr8aLVPUu9s-BwJPSBIFlGJCvgAlDI9Oi8hc=" alt="" class="img-fluid d-block mx-auto mb-3">
+             <h3><a href="{% url 'letsout'  %}" class="btn btn-primary" role="button">Logout</a> </h3>
+      
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <!-- Card-->
+      <div class="card rounded shadow-sm border-3">
+        <div class="card-body p-4"><img src="https://media.istockphoto.com/id/1319634209/photo/lessons-for-the-future-for-law-or-human-rights-after-the-epidemic.jpg?b=1&s=170667a&w=0&k=20&c=PqiKKq0cqOl9mXctg0XR_NDVPSxLYZ5Q0unC3Ch7QXY=" alt="" class="img-fluid d-block mx-auto mb-3">
+           <h3><a href="{% url 'letsout'  %}" class="btn btn-primary" role="button">Logout</a></h3>
+        
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+            <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<footer class="py-5 bg-dark">
+<div class="container">
+  <p class="m-0 text-center text-white"> &copy; CRIM</p>
+</div>
+<!-- /.container -->
+</footer>
+
+
+
+</body>
+</html>

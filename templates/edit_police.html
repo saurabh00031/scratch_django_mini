@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIM</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+
+
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CRIM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+
+        <li class="nav-item">
+
+        </li>
+
+        <li class="nav-item">
+        
+        </li>
+
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    <div class="container mt-5">
+  <!-- For Demo Purpose-->
+  <header class="text-center mb-5">
+    <h3 class="mt-5"><b>UPDATE POLICE !!</b></h3>
+    <hr>
+    
+  </header>
+</div>
+
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong>WARNING:</strong> {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+   
+
+    <div class="container mb-5" style="border:2px solid black;padding:40px;width:80%">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+            <div class="form-group">
+                <p>Station Name</p>
+                <div class="icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter station_name" name="station_name" value="{{police_info.station_name}}" required>
+            </div>
+
+              <div class="form-group">
+                <p>Station Incharge</p>
+                <div class="icon">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter station_incharge" name="station_incharge" value="{{police_info.station_incharge}}" required>
+            </div>
+
+              <div class="form-group">
+                <p>Email Address</p>
+                <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <input type="email" class="form-control" placeholder="Enter email" name="email" value="{{police_info.email1}}" required>
+            </div>
+
+              <div class="form-group">
+                <p>Station City</p>
+                <div class="icon">
+                    <i class="fa fa-building"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter City Name" name="station_city" value="{{police_info.station_city}}" required>
+            </div>
+
+             <div class="form-group">
+                <p>Mobile No.</p>
+                <div class="icon">
+                    <i class="fa fa-address-card"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter mobile number" name="mobile" value="{{police_info.mobile}}" required>
+            </div>
+
+               <div class="form-group">
+                <p>Email Address1</p>
+                <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <input type="email" class="form-control" placeholder="Enter email1" name="email1" value="{{police_info.email1}}" required>
+            </div>
+
+              <div class="form-group">
+                <p>Email Address2</p>
+                <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <input type="email" class="form-control" placeholder="Enter email2" name="email2" value="{{police_info.email2}}" required>
+            </div>
+
+          <div class="form-group">
+                <p>Email Address3</p>
+                <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <input type="email" class="form-control" placeholder="Enter email3" name="email3" value="{{police_info.email3}}" required>
+            </div>
+
+              <div class="form-group">
+                <p>Email Address4</p>
+                <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <input type="email" class="form-control" placeholder="Enter email4" name="email4" value="{{police_info.email4}}" required>
+            </div>
+
+            <div class="row mt-5 ">
+                <center><button class="btn btn-success" type="submit">Update data</button></center>
+            </div>
+
+
+        </form> 
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+<footer class="py-5 bg-dark">
+<div class="container">
+  <p class="m-0 text-center text-white"> &copy; CRIM</p>
+</div>
+<!-- /.container -->
+</footer>
+
+
+
+</body>
+
+
+
+
+</html>

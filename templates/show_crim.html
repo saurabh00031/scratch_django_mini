@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIM</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CRIM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+
+        <li class="nav-item">
+
+        </li>
+
+        <li class="nav-item">
+        
+        </li>
+
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+     <div class="container mt-5">
+
+  <header class="text-center mb-5">
+    <h3 class="mt-5"><b>SHOW CRIM !!</b></h3>
+    <hr>
+    
+  </header>
+</div>
+
+  <div class="container mt-5">
+{% comment %} sssssssssssssssssssss {% endcomment %}
+
+      
+
+       <div class="row">
+
+       <center>
+
+       <div class="col-11">
+           <form action="{% url 'search' %}" method="get">
+            <input name="q" class="form-control" type="text" placeholder="Search" />
+            <div>
+            <center><button class="btn btn-info mt-3">Search</button></center>
+            </div>
+         </form>
+         </div>
+
+         </center>
+
+         </div>
+
+        </div>
+
+
+    
+    <main>
+        
+        <!--MDB Tables-->
+        <div class="container mt-4">
+
+            <div class="text-center darken-grey-text mb-4">
+
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <!-- Grid row -->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-12">
+                          
+                            {% comment %} <div class="input-group md-form form-sm form-2 pl-0">
+                                <input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Search something here..." aria-label="Search">
+                                <span class="input-group-addon waves-effect purple lighten-2" id="basic-addon1"><a><i class="fa fa-search white-text" aria-hidden="true"></i></a></span>
+                            </div> {% endcomment %}
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                    <!--Table-->
+                    <table class="table table-striped">
+                        <!--Table head-->
+                        <thead>
+                            <tr>
+                                  <th scope="col">ID</th>
+                                  <th scope="col">CRIMS ID</th>
+                                  <th scope="col">NAME</th>
+                                  <th scope="col">HEIGHT</th>
+                                  <th scope="col">EYES</th>
+                                  <th scope="col">SKIN</th>
+                                  
+                                  <th scope="col">SHOW</th>
+                                  <th scope="col">UPDATE</th>
+                                  <th scope="col">DELETE</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            {% for i in stu %}
+
+                          <tr>
+
+                            <td>{{i.id}}</td>
+                            <td>{{i.crims_id}}</td>
+                            <td>{{i.name}}</td>
+                            <td>{{i.height}}</td>
+                            <td>{{i.eyes}}</td>
+                            <td>{{i.skin}}</td>
+                           
+
+
+                            <td><a href="{% url 'showdata' i.crims_id %}" class="btn btn-warning">show</a></td>
+
+                            <td><a href="{% url 'updatedata' i.crims_id %}" class="btn btn-warning">Update</a></td>
+                              
+                            
+                                {% comment %} <a href="{% url 'deletedata' i.id %}" class="btn btn-warning">delete</a> {% endcomment %}
+                              <td>
+                              <form action="{% url 'deletedata' i.crims_id %}" method ="post" class="d-inline">
+                              {% csrf_token %}
+                              <input type="submit" value="Delete" class="btn btn-danger">
+                           
+                              </form>
+                              </td>
+                            
+                            
+                          </tr>
+
+                      {% endfor %}
+                    </table>
+                    <!--Table-->
+                </div>
+            </div>
+
+
+            
+          
+            <hr class="my-4">
+          
+            
+
+        </div>
+        <!--MDB Tables-->
+
+</main>
+
+      
+ 
+
+
+<footer class=" container-fluid py-5 bg-dark">
+<div class="container">
+  <p class="m-0 text-center text-white"> &copy; CRIM</p>
+</div>
+<!-- /.container -->
+</footer>
+
+   
+
+
+
+
+
+</body>
+</html>
